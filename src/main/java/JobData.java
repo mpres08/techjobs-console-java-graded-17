@@ -98,13 +98,11 @@ public class JobData {
 
         for (HashMap<String, String> aJob : allJobs) {
             for (String aValue : aJob.values()) {
-                System.out.println("\n*****");
                 if (aValue.toLowerCase().contains(value.toLowerCase())) {
                     jobs.add(aJob);
                 }
             }
         }
-        System.out.print("*****\n");
         return jobs;
     }
 
