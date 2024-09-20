@@ -19,6 +19,7 @@ public class TechJobs {
         columnChoices.put("location", "Location");
         columnChoices.put("position type", "Position Type");
         columnChoices.put("all", "All");
+//        System.out.println(columnChoices);
 
         // Top-level menu options
         HashMap<String, String> actionChoices = new HashMap<>();
@@ -119,11 +120,16 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-        for (int i = 0; i < someJobs.size(); i++) {
-            System.out.println(someJobs.get(i));
-        } for (Map.Entry<String, String> columnChoice : columnChoices.entrySet()) {
-            System.out.println(columnChoice.getKey() + columnChoice.getValue());
+        if (someJobs.isEmpty()) {
+            System.out.print("No Results");
+        } else {
+            for (HashMap<String, String> someJob : someJobs) {
+                System.out.println("\n*****");
+                for (Map.Entry<String, String> jobDetail : someJob.entrySet()) {
+                    System.out.println(jobDetail.getKey() + ": " + jobDetail.getValue());
+                }
+            }
+            System.out.print("*****\n");
         }
-        System.out.println("printJobs is not implemented yet");
     }
 }
