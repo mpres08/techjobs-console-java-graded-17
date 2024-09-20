@@ -19,7 +19,6 @@ public class TechJobs {
         columnChoices.put("location", "Location");
         columnChoices.put("position type", "Position Type");
         columnChoices.put("all", "All");
-//        System.out.println(columnChoices);
 
         // Top-level menu options
         HashMap<String, String> actionChoices = new HashMap<>();
